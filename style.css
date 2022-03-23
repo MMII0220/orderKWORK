@@ -1,0 +1,118 @@
+/* Наш Шрифт 
+************* font-family: 'Roboto', sans-serif; */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #1f1f1f;
+}
+.container {
+  max-width: 1404px;
+  width: 100%;
+  margin: 0 auto;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+/* Header 
+**************/
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
+.logo__text a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: calc(12px + 0.9vw);
+  line-height: 121%;
+  padding-left: 24px;
+  color: #1f1f1f;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  margin-left: 20px;
+}
+.nav__link {
+  font-family: 'Roboto', sans-serif;
+  color: #1f1f1f;
+  font-weight: 500;
+  font-size: calc(6px + 0.9vw);
+  line-height: 121%;
+  text-decoration: none;
+  margin-right: 3%;
+  transition: 0.2s linear background-color, 0.2s linear border-radius;
+}
+.nav:last-child {
+  margin-right: 0;
+}
+.nav__link:hover {
+  background: #8ad2f5;
+  border-radius: 10px;
+  width: auto;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.link--active {
+  background: #8ad2f5;
+  border-radius: 10px;
+  width: auto;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.header__subscribe {
+}
+.subscribe {
+  padding: 8px 25px;
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(8px + 0.9vw);
+  line-height: 121%;
+  font-weight: 500;
+
+  border: 2px solid #8ad2f5;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+/* Intro
+**************/
+.intro__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.intro__content {
+  display: flex;
+  flex-direction: column;
+}
+.intro__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
