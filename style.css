@@ -6,6 +6,7 @@
 }
 body {
   color: #1f1f1f;
+  font-family: 'Roboto', sans-serif;
 }
 .container {
   max-width: 1404px;
@@ -13,15 +14,20 @@ body {
   margin: 0 auto;
 }
 button {
+  font-family: 'Roboto', sans-serif;
   background: none;
   border: none;
   outline: none;
 }
 a {
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
 }
 /* Header 
 **************/
+.btn--size {
+  font-size: calc(8px + 0.9vw);
+}
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -92,16 +98,22 @@ a {
 .subscribe {
   padding: 8px 25px;
   font-family: 'Roboto', sans-serif;
-  font-size: calc(8px + 0.9vw);
   line-height: 121%;
   font-weight: 500;
 
   border: 2px solid #8ad2f5;
   box-sizing: border-box;
   border-radius: 16px;
+  transition: 0.2s linear background-color;
+}
+.subscribe:hover {
+  background-color: #8ad2f5;
 }
 /* Intro
 **************/
+.subtext {
+  font-size: calc(3px + 0.9vw);
+}
 .intro__inner {
   display: flex;
   justify-content: space-between;
@@ -110,9 +122,66 @@ a {
 .intro__content {
   display: flex;
   flex-direction: column;
+  width: 769px;
 }
 .intro__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 48px;
+}
+.intro__title {
+  font-weight: 600;
+  font-size: calc(40px + 0.9vw);
+  line-height: 110%;
+  width: 81%;
+  margin-bottom: 32px;
+}
+.demo {
+  margin-left: 4%;
+}
+.highlight {
+  padding-right: 1%;
+  padding-left: 1%;
+  background: #8ad2f5;
+  border-radius: 25px;
+}
+.intro__text {
+  border-radius: 20px;
+  border: 2px solid rgba(138, 174, 245, 0.3);
+  width: 385px;
+  height: 137px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4%;
+}
+.intro__text:first-child {
+  margin-left: 0;
+}
+.intro__subtitle {
+  font-weight: 500;
+  line-height: 130%;
+  width: 335px;
+}
+.intro__gallery {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 756px;
+}
+.intro__man {
+  transform: translate(36%, -23%);
+  width: 363px;
+  height: 448px;
+  object-fit: cover;
+  max-width: 100%;
+}
+.intro__screen {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 545px;
+  height: 330px;
 }
