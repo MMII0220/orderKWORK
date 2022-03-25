@@ -138,6 +138,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 48px;
 }
 .intro__title {
@@ -226,6 +227,7 @@ textarea {
 }
 .contact__face {
   width: 449px;
+  min-width: 300px;
   height: 59px;
   padding-left: 6.6815144766%;
   padding-top: 4%;
@@ -234,9 +236,9 @@ textarea {
   border-radius: 20px;
   margin-bottom: 20px;
 }
-.contact__face:last-child {
+/* .contact__face:last-child {
   margin-bottom: 0;
-}
+} */
 .contact__text {
   color: rgba(31, 31, 31, 0.2);
   line-height: 115%;
@@ -269,6 +271,7 @@ textarea {
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
   width: 60px;
   height: 137px;
 
