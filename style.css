@@ -138,14 +138,12 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   margin-bottom: 48px;
 }
 .intro__title {
   font-weight: 600;
   font-size: calc(40px + 0.9vw);
   line-height: 110%;
-  width: 81%;
   margin-bottom: 32px;
 }
 .demo {
@@ -246,6 +244,7 @@ textarea {
 }
 .request__task {
   width: 359px;
+  margin: 0 10px 10px;
   height: 137px;
 
   padding-top: 16px;
@@ -259,6 +258,7 @@ textarea {
 }
 .task__text {
   width: 275px;
+  max-width: 100%;
   height: 86px;
   resize: none;
 
@@ -281,4 +281,22 @@ textarea {
 .icon__send {
   width: 32px;
   height: 32px;
+}
+
+/* Booco solution
+***********************/
+
+.booco__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+
+  background-color: red;
+  border: 2px solid rgba(138, 174, 245, 0.3);
+  box-sizing: border-box;
+  filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 20px;
 }
