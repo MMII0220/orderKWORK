@@ -291,12 +291,33 @@ textarea {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap-reverse;
+  position: relative;
+  top: 0;
+}
 
-  background-color: red;
-  border: 2px solid rgba(138, 174, 245, 0.3);
-  box-sizing: border-box;
-  filter: blur(5px);
-  /* Note: backdrop-filter has minimal browser support */
+.booco__block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 
-  border-radius: 20px;
+  width: 1224px;
+  height: 554px;
+
+  background-image: url('./assets/img/filter.png');
+
+  filter: blur(6px);
+  z-index: -1;
+}
+.leaf1 {
+  position: absolute;
+  bottom: -239px;
+  left: -149px;
+  z-index: -3;
+}
+.leaf2 {
+  position: absolute;
+  top: -61px;
+  right: 5px;
+  z-index: -3;
 }
