@@ -285,16 +285,17 @@ textarea {
 
 /* Booco solution
 ***********************/
-
 .booco__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap-reverse;
+  height: auto;
   position: relative;
   top: 0;
-}
 
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
 .booco__block {
   position: absolute;
   top: 0;
@@ -302,9 +303,10 @@ textarea {
   left: 0;
 
   width: 1224px;
-  height: 554px;
+  height: 98.5%;
 
   background-image: url('./assets/img/filter.png');
+  background-size: cover;
 
   filter: blur(6px);
   max-width: 100%;
@@ -312,7 +314,7 @@ textarea {
 }
 .leaf1 {
   position: absolute;
-  bottom: -239px;
+  bottom: -57px;
   left: -149px;
   z-index: -3;
 }
@@ -321,4 +323,48 @@ textarea {
   top: -61px;
   right: 5px;
   z-index: -3;
+}
+.booco__title {
+  font-weight: 500;
+  font-size: 60px;
+  font-size: calc(46px + 1vw);
+  line-height: 110%;
+
+  margin: 0 auto 100px;
+  text-align: center;
+
+  margin-bottom: 100px;
+}
+.booco__suptitle {
+  font-size: calc(23px + 1vw);
+  font-weight: 500;
+  line-height: 110%;
+  margin-bottom: 32px;
+}
+.booco__subtext {
+  font-size: calc(6.5px + 1vw);
+  font-weight: 500;
+  line-height: 130%;
+}
+.booco__text {
+  min-width: 434px;
+  width: 100%;
+  height: auto;
+  font-size: calc(23px + 1vw);
+}
+.booco__gallery {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-right: 22px;
+}
+.screen__outer {
+  max-width: 100%;
+}
+.screen__inner {
+  position: absolute;
+  bottom: -36px;
+  right: -44px;
+  max-width: 100%;
 }
