@@ -307,6 +307,7 @@ textarea {
   background-image: url('./assets/img/filter.png');
 
   filter: blur(6px);
+  max-width: 100%;
   z-index: -1;
 }
 .leaf1 {
