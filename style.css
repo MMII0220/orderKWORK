@@ -288,6 +288,7 @@ textarea {
 .booco__inner {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   height: auto;
   position: relative;
@@ -302,13 +303,13 @@ textarea {
   right: 0;
   left: 0;
 
-  width: 1224px;
+  width: 100%;
   height: 98.5%;
 
   background-image: url('./assets/img/filter.png');
   background-size: cover;
 
-  filter: blur(6px);
+  filter: blur(6px) opacity(94%);
   max-width: 100%;
   z-index: -1;
 }
@@ -347,17 +348,20 @@ textarea {
   line-height: 130%;
 }
 .booco__text {
-  min-width: 434px;
-  width: 100%;
+  width: 434px;
   height: auto;
   font-size: calc(23px + 1vw);
+
+  margin-left: 4.7%;
 }
 .booco__gallery {
   position: relative;
-  width: 100%;
+  width: 648px;
   height: auto;
   overflow: hidden;
   padding-right: 22px;
+
+  margin-right: 4.7%;
 }
 .screen__outer {
   max-width: 100%;
