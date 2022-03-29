@@ -29,7 +29,9 @@ textarea {
   background: none;
   outline: none;
 }
+
 /* Header 
+
 **************/
 .btn--size {
   font-size: calc(8px + 0.9vw);
@@ -116,7 +118,9 @@ textarea {
 .subscribe:hover {
   background-color: #8ad2f5;
 }
+
 /* Intro
+
 **************/
 .subtext {
   font-size: calc(3px + 0.9vw);
@@ -197,6 +201,7 @@ textarea {
 }
 
 /* Request 
+
 ***************/
 .request {
   margin-bottom: 15%;
@@ -284,6 +289,7 @@ textarea {
 }
 
 /* Booco solution
+
 ***********************/
 .booco__solution {
   margin-bottom: 150px;
@@ -312,7 +318,7 @@ textarea {
   background-image: url('./assets/img/filter.png');
   background-size: cover;
 
-  filter: blur(6px) opacity(94%);
+  filter: blur(6px) opacity(98%);
   max-width: 100%;
   z-index: -1;
 }
@@ -375,3 +381,70 @@ textarea {
   right: -44px;
   max-width: 100%;
 }
+
+/* Features 
+
+******************/
+.feature__title {
+  text-align: center;
+
+  font-weight: 500;
+  font-size: calc(46px + 1vw);
+  line-height: 110%;
+
+  margin-bottom: 80px;
+}
+.features__content {
+  display: grid;
+  grid-template: auto / auto auto auto;
+
+  position: relative;
+}
+.feature__block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  height: 98.5%;
+
+  background-image: url('./assets/img/filter.png');
+  background-size: cover;
+
+  margin-bottom: 30px;
+  filter: blur(6px) opacity(98%);
+  max-width: 100%;
+  z-index: -1;
+}
+.block__suptitle {
+  margin-top: 60px;
+
+  font-weight: 500;
+  font-size: calc(22px + 1vw);
+  line-height: 110%;
+
+  margin-bottom: 32px;
+}
+.block__subtext {
+  margin-bottom: 60px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}
+/* Offer 
+
+********************/
+
+/* Projects 
+
+********************/
+
+/* Request 
+
+******************/
+
+/* Footer 
+
+************************/
