@@ -900,7 +900,40 @@ textarea {
 /* Footer 
 
 ************************/
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 281px);
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__desc {
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
 
+  margin-bottom: 28%;
+}
+.footer__subtext {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 16px;
+  color: rgba(31, 31, 31, 0.6);
+}
+.footer__suptitle {
+  margin-bottom: 38%;
+}
+.footer__subtitle {
+  margin-top: 49%;
+
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 127%;
+}
 /* Media
 
 ********************/
@@ -1170,5 +1203,24 @@ textarea {
   }
   .projects__block--quarter {
     width: 100%;
+  }
+}
+@media (max-width: 1167px) {
+  .footer__subscribe2 {
+    margin-top: 50px;
+  }
+  .footer__suptitle {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 870px) {
+  .footer__logo {
+    margin-bottom: 13%;
+  }
+  .footer__suptitle {
+    margin-bottom: 18%;
+  }
+  .footer__subtitle {
+    margin-top: 29%;
   }
 }
