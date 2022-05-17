@@ -900,6 +900,9 @@ textarea {
 /* Footer 
 
 ************************/
+.footer {
+  margin-bottom: 50px;
+}
 .footer__inner {
   display: grid;
   grid-template-columns: repeat(auto-fill, 281px);
@@ -907,6 +910,7 @@ textarea {
   align-items: center;
 }
 .footer__desc {
+  grid-area: 1 / span 2;
 }
 .footer__logo {
   display: flex;
@@ -999,6 +1003,12 @@ textarea {
   }
   .subtext {
     font-size: calc(9px + 0.9vw);
+  }
+  .offer--icon__right {
+    right: -35px;
+  }
+  .offer--icon__left {
+    left: -35px;
   }
 }
 @media (max-width: 768px) {
@@ -1213,7 +1223,10 @@ textarea {
     margin-top: 50px;
   }
 }
-@media (max-width: 870px) {
+@media (max-width: 880px) {
+  .footer__desc {
+    grid-area: 1 / span 1;
+  }
   .footer__logo {
     margin-bottom: 13%;
   }
@@ -1222,5 +1235,10 @@ textarea {
   }
   .footer__subtitle {
     margin-top: 29%;
+  }
+}
+@media (max-width: 600px) {
+  .footer__inner {
+    justify-content: center;
   }
 }
