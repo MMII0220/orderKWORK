@@ -11,9 +11,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+
     <title>Document</title>
+
     <script
-      src="https://kit.fontawesome.com/71c8e3d52f.js"
+      src="https://kit.fontawesome.com/e34e4f3bdb.js"
       crossorigin="anonymous"
     ></script>
   </head>
@@ -35,11 +37,12 @@
             </div>
 
             <nav class="nav">
-              <a href="#" class="nav__link link--active">о booco</a>
-              <a href="#" class="nav__link">для офисов</a>
-              <a href="#" class="nav__link">для музеев</a>
-              <a href="#" class="nav__link">для образования</a>
-              <a href="#" class="nav__link">для медицины</a>
+              <div class="icon__link"><i class="fa-solid fa-bars"></i></div>
+              <a href="#booco" class="nav__link hide link--active">о booco</a>
+              <a href="#area" class="nav__link hide">для офисов</a>
+              <a href="#client" class="nav__link hide">для музеев</a>
+              <a href="#perhaps" class="nav__link hide">для образования</a>
+              <a href="#offer" class="nav__link hide">для медицины</a>
             </nav>
 
             <div class="header__subscribe">
@@ -51,6 +54,8 @@
       </header>
       <!-- .header -->
 
+      <!-- Перемещаемся сюда-->
+      <a id="booco"></a>
       <main class="main">
         <!-- Intro -->
         <section class="intro">
@@ -127,7 +132,7 @@
                   </div>
                 </div>
                 <div class="request__task">
-                  <textarea class="task__text subtext">Задача</textarea>
+                  <textarea placeholder="Задача" class="task__text subtext"></textarea>
                 </div>
                 <picture class="request__icon">
                   <img src="./assets/icons/send.png" alt="icon send" class="icon__send" />
@@ -139,6 +144,9 @@
           <!-- .container -->
         </section>
         <!-- .request -->
+
+        <!-- Перемещаемся сюда-->
+        <a id="area"></a>
 
         <!-- Booco solution -->
         <section class="booco__solution">
@@ -202,6 +210,7 @@
         </section>
         <!-- .booco__solution -->
 
+        <a id="client"></a>
         <!-- Features -->
         <section class="booco__features">
           <div class="container">
@@ -263,6 +272,7 @@
         </section>
         <!-- .booco__features -->
 
+        <a id="perhaps"></a>
         <!-- Advantages -->
         <section class="booco__advantages">
           <div class="container special">
@@ -377,7 +387,7 @@
                   </div>
                 </div>
                 <div class="request__task">
-                  <textarea class="task__text subtext">Задача</textarea>
+                  <textarea placeholder="Задача" class="task__text subtext"></textarea>
                 </div>
                 <picture class="request__icon">
                   <img src="./assets/icons/send.png" alt="icon send" class="icon__send" />
@@ -390,6 +400,7 @@
         </section>
         <!-- .request -->
 
+        <a id="offer"></a>
         <!-- Offer -->
         <section class="offer">
           <div class="container special">
@@ -614,7 +625,7 @@
                 </div>
               </div>
               <div class="request__task">
-                <textarea class="task__text subtext">Задача</textarea>
+                <textarea placeholder="Задача" class="task__text subtext"></textarea>
               </div>
               <picture class="request__icon">
                 <img src="./assets/icons/send.png" alt="icon send" class="icon__send" />
@@ -671,6 +682,8 @@
         <!-- .container -->
       </footer>
       <!-- .footer -->
+
+      <script src="./main.js"></script>
     </div>
   </body>
 </html>

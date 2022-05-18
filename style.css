@@ -45,6 +45,16 @@ textarea {
 /* Header 
 
 **************/
+.header {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: aliceblue;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
 .btn--size {
   font-size: calc(8px + 0.9vw);
 }
@@ -76,7 +86,15 @@ textarea {
   justify-content: space-between;
   align-items: center;
   width: 65%;
-  margin-left: 20px;
+  margin-left: 3%;
+}
+.icon__link {
+  cursor: pointer;
+  transition: 0.2s linear color;
+  display: none;
+}
+.icon__link:hover {
+  color: rgb(131, 125, 125);
 }
 .nav__link {
   font-family: 'Roboto', sans-serif;
@@ -87,6 +105,9 @@ textarea {
   text-decoration: none;
   margin-right: 3%;
   transition: 0.2s linear background-color, 0.2s linear border-radius;
+
+  animation-name: fade;
+  animation-duration: 1s;
 }
 .nav:last-child {
   margin-right: 0;
@@ -113,7 +134,8 @@ textarea {
   padding-right: 5px;
   padding-left: 5px;
 }
-.header__subscribe {
+.fa-bars {
+  font-size: 25px;
 }
 .subscribe {
   padding: 8px 25px;
@@ -365,6 +387,7 @@ textarea {
   border-radius: 50%;
   filter: opacity(50%);
 
+  z-index: 100;
   transition: 0.2s linear filter, 0.2s linear backgorund-color;
 }
 .icon__left:hover {
@@ -610,8 +633,8 @@ textarea {
   justify-content: center;
   align-items: center;
 
-  width: 60px;
-  height: 60px;
+  width: calc(45px + 1vw);
+  height: calc(45px + 1vw);
   background-color: #cceafa;
   border: 2px solid rgba(138, 174, 245, 0.3);
   border-radius: 50%;
@@ -628,8 +651,8 @@ textarea {
   justify-content: center;
   align-items: center;
 
-  width: 60px;
-  height: 60px;
+  width: calc(45px + 1vw);
+  height: calc(45px + 1vw);
   background-color: #cceafa;
   border: 2px solid rgba(138, 174, 245, 0.3);
   border-radius: 50%;
@@ -706,6 +729,9 @@ textarea {
 /* .offer__description {
   grid-area: 3 / span 2;
 } */
+.offer__occupied {
+  margin: auto;
+}
 .offer__suptitle {
   width: 109%;
   font-weight: 400;
@@ -832,7 +858,7 @@ textarea {
   width: 168px;
   height: 168px;
 
-  margin-left: 40px;
+  margin-left: 6%;
 }
 .project__view {
   max-width: 100%;
@@ -873,8 +899,8 @@ textarea {
 }
 .project--icon__right {
   position: absolute;
-  bottom: 22%;
-  right: 8%;
+  bottom: 18%;
+  right: 4%;
 
   display: flex;
   justify-content: center;
@@ -916,7 +942,7 @@ textarea {
   display: flex;
   align-items: center;
 
-  margin-bottom: 28%;
+  margin-bottom: 20%;
 }
 .footer__subtext {
   font-family: 'Gilroy';
@@ -930,7 +956,7 @@ textarea {
   margin-bottom: 38%;
 }
 .footer__subtitle {
-  margin-top: 49%;
+  margin-top: 34%;
 
   font-family: 'Gilroy';
   font-style: normal;
@@ -977,6 +1003,13 @@ textarea {
   .demo {
     margin-left: 0;
   }
+  .project--icon__right {
+    bottom: 2%;
+    right: 67%;
+  }
+  .project__block {
+    height: 103%;
+  }
 }
 @media (max-width: 1000px) {
   .intro__inner {
@@ -1010,6 +1043,12 @@ textarea {
   .offer--icon__left {
     left: -35px;
   }
+  .advantage--icon__right {
+    right: -5%;
+  }
+  .advantage--icon__left {
+    left: -5%;
+  }
 }
 @media (max-width: 768px) {
   .intro__text {
@@ -1022,6 +1061,9 @@ textarea {
 
 *******************/
 @media (max-width: 657px) {
+  .projects__title {
+    font-size: calc(35px + 1vw);
+  }
   .contact__face {
     width: 100%;
   }
@@ -1066,10 +1108,6 @@ textarea {
   }
 }
 @media (max-width: 420px) {
-  .project--icon__right {
-    bottom: 50%;
-    right: 2%;
-  }
 }
 
 /* Booco solution 
@@ -1220,7 +1258,7 @@ textarea {
     margin-top: 50px;
   }
   .footer__suptitle {
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
 }
 @media (max-width: 880px) {
@@ -1236,9 +1274,137 @@ textarea {
   .footer__subtitle {
     margin-top: 29%;
   }
+
+  .icon__right {
+    right: -30px;
+  }
+  .icon__left {
+    left: -30px;
+  }
 }
 @media (max-width: 600px) {
   .footer__inner {
     justify-content: center;
   }
 }
+@media (max-width: 682px) {
+  .offer .special {
+    max-width: 1404px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .offer__description {
+    width: 87%;
+  }
+  .offer__content {
+    padding: 12% 16px;
+  }
+  .offer__suptitle {
+    font-size: calc(22px + 1vw);
+  }
+  .offer--icon__right {
+    right: 0;
+  }
+  .offer--icon__left {
+    left: 0;
+  }
+}
+@media (max-width: 682px) {
+  .offer__description {
+    width: 68%;
+  }
+}
+@media (max-width: 410px) {
+  .offer__description {
+    width: 50%;
+  }
+}
+@media (max-width: 350px) {
+  .offer__description {
+    width: 49%;
+  }
+}
+@media (max-width: 320px) {
+  .offer__description {
+    width: 90%;
+  }
+}
+@media (max-width: 560px) {
+  .offer__occupied {
+    width: 300px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 465px) {
+  .offer__occupied {
+    width: 300px;
+    max-width: 100%;
+
+    margin: 0;
+  }
+  .offer__title {
+    font-size: calc(35px + 1vw);
+  }
+  .features__block {
+    flex: 0 0 100%;
+  }
+}
+
+/* Nav adaptive
+
+***************************/
+@media (max-width: 800px) {
+  .nav__link:hover {
+    height: 30px;
+  }
+  .link--active {
+    height: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .icon__link {
+    display: block;
+    margin-bottom: 5%;
+  }
+  .header__subscribe {
+    margin-top: 2%;
+  }
+  .header__inner {
+    justify-content: flex-start;
+  }
+  .nav {
+    flex-direction: column;
+    margin-right: 3%;
+  }
+  .nav__link {
+    height: 30px;
+    margin-bottom: 5%;
+
+    font-size: calc(9px + 0.9vw);
+  }
+  .header__inner {
+    align-items: unset;
+  }
+  .header__logo {
+    align-items: unset;
+  }
+  .logo__text {
+    margin-top: 11%;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+width: calc(45px + 1vw);
+height: calc(45px + 1vw);
