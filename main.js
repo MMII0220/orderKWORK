@@ -2,7 +2,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const bar = document.querySelector('.icon__link'),
     link = document.querySelectorAll('.nav__link'),
     nav = document.querySelector('.nav'),
-    icon__bar = document.querySelector('.icon__link'), header = document.querySelector(".header");
+    icon__bar = document.querySelector('.icon__link'),
+    header = document.querySelector(".header"),
+    booco__right = document.quesrySelector(".icon__right"),
+    booco__left = document.querySelector(".icon__left");
 
   /* Nav Bar
 
