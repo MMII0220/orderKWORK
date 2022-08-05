@@ -4,6 +4,10 @@ window.addEventListener('DOMContentLoaded', () => {
     nav = document.querySelector('.nav'),
     icon__bar = document.querySelector('.icon__link'), header = document.querySelector(".header");
 
+  /* Nav Bar
+
+  **********************/
+
   let i = 0;
 
   bar.addEventListener('click', () => {
@@ -35,4 +39,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     i++;
   });
+
+  /* Carousel-Image
+
+  ************************/
+
+  
+
+
+
 });

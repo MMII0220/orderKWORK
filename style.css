@@ -78,7 +78,7 @@ textarea {
   font-weight: 500;
   font-size: calc(12px + 0.9vw);
   line-height: 121%;
-  padding-left: 24px;
+  margin-left: 24px;
   color: #1f1f1f;
 }
 .nav {
@@ -1259,9 +1259,6 @@ textarea {
   .footer__subscribe2 {
     margin-top: 50px;
   }
-  .footer__suptitle {
-    /* margin-top: 50px; */
-  }
 }
 @media (max-width: 880px) {
   .footer__desc {
@@ -1416,6 +1413,6 @@ textarea {
     opacity: 1;
   }
 }
-
+/* 
 width: calc(45px + 1vw);
-height: calc(45px + 1vw);
+height: calc(45px + 1vw); */
