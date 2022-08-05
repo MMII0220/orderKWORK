@@ -122,8 +122,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 5px;
-  padding-left: 5px;
+  /* padding-right: 5px;
+  padding-left: 5px; */
 }
 .link--active {
   background: #8ad2f5;
