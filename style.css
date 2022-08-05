@@ -1389,7 +1389,9 @@ textarea {
     height: 30px;
     margin-bottom: 5%;
     margin-top: 12%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: calc(9px + 0.9vw);
   }
   .header__inner {
