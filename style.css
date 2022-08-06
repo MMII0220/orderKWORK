@@ -464,7 +464,7 @@ textarea {
 
   margin-left: 4.7%;
 }
-.booco__gallery {
+.booco__gallery__inner {
   position: relative;
   width: 648px;
   height: auto;
@@ -472,6 +472,14 @@ textarea {
   padding-right: 22px;
 
   margin-right: 4.7%;
+
+  display: none;
+}
+.active__image {
+  display: block;
+
+  animation-name: fade;
+  animation-duration: 1s;
 }
 .screen__outer {
   max-width: 100%;
@@ -1133,7 +1141,7 @@ textarea {
   .booco__text {
     width: 100%;
   }
-  .booco__gallery {
+  .booco__gallery__inner {
     overflow: visible;
     margin: auto;
     margin-top: 2%;
@@ -1164,7 +1172,7 @@ textarea {
   }
 }
 @media (max-width: 320px) {
-  .booco__gallery {
+  .booco__gallery__inner {
     margin-top: 30%;
   }
   .intro__title {

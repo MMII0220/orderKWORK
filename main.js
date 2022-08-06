@@ -4,14 +4,59 @@ window.addEventListener('DOMContentLoaded', () => {
     nav = document.querySelector('.nav'),
     icon__bar = document.querySelector('.icon__link'),
     header = document.querySelector(".header"),
-    booco__right = document.quesrySelector(".icon__right"),
-    booco__left = document.querySelector(".icon__left");
+    booco__right = document.querySelector(".icon__right"),
+    booco__left = document.querySelector(".icon__left"),
+    carouselImages = document.querySelectorAll(".booco__gallery__inner");
 
-  /* Nav Bar
+  /* Carousel-Image
+
+  ************************/
+  var index = 0;
+
+  function activeImage(n) {
+    for(carousel of carouselImages) {
+      carousel.classList.remove('active__image');
+    }
+
+    carouselImages[n].classList.add('active__image');
+  }
+
+  function rangeOfImage() {
+    if (index == carouselImages.length - 1) {
+      index = 0;
+      activeImage(index)
+    } else {
+      index++;
+      activeImage(index)
+    }
+  }
+
+  function nextImage() {
+    booco__right.addEventListener("click", rangeOfImage);
+  }
+
+  function prevImage() {
+    booco__left.addEventListener("click", rangeOfImage);
+  }
+
+  nextImage();
+  prevImage();
+  rangeOfImage();
+  activeImage(index);
+
+
+
+
+
+
+
+
+
+    /* Nav Bar
 
   **********************/
 
-  let i = 0;
+  var i = 0;
 
   bar.addEventListener('click', () => {
     if (i % 2 == 0) {
@@ -42,13 +87,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
     i++;
   });
-
-  /* Carousel-Image
-
-  ************************/
-
-  
-
-
-
 });
