@@ -1,17 +1,38 @@
 window.addEventListener('DOMContentLoaded', () => {
   const bar = document.querySelector('.icon__link'),
-    link = document.querySelectorAll('.nav__link'),
+    links = document.querySelectorAll('.nav__link'),
     nav = document.querySelector('.nav'),
     icon__bar = document.querySelector('.icon__link'),
     header = document.querySelector(".header"),
     booco__right = document.querySelector(".icon__right"),
     booco__left = document.querySelector(".icon__left"),
-    carouselImages = document.querySelectorAll(".booco__gallery__inner");
+    carouselImages = document.querySelectorAll(".booco__gallery__inner"),
+    smoothLinks = document.querySelectorAll('a[href^="#"]');
+
+  /* Link Transition
+
+  ***********************/
+
+  for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const e = event.target;
+
+      const id = e.getAttribute("href");
+
+      document.querySelector(id).scrollIntoView({
+        behavior: "smooth",
+        block: 'start',
+      });
+    });
+  }
 
   /* Carousel-Image
 
   ************************/
-  var index = 0;
+
+  var indexImage = 0;
 
   function activeImage(n) {
     for(var carousel of carouselImages) {
@@ -22,12 +43,12 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function rangeOfImage() {
-    if (index == carouselImages.length - 1) {
-      index = 0;
-      activeImage(index);
+    if (indexImage == carouselImages.length - 1) {
+      indexImage = 0;
+      activeImage(indexImage);
     } else {
-      index++;
-      activeImage(index);
+      indexImage++;
+      activeImage(indexImage);
     }
   }
 
@@ -42,7 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
   nextImage();
   prevImage();
   rangeOfImage();
-  activeImage(index);
+  activeImage(indexImage);
 
 
 
@@ -60,7 +81,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   bar.addEventListener('click', () => {
     if (i % 2 == 0) {
-      link.forEach((item) => {
+      links.forEach((item) => {
         item.classList.remove('hide');
         nav.style.backgroundColor = '#2fbaff';
         nav.style.position = 'absolute';
@@ -73,7 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
           '<i class="fa-solid fa-x" style="font-size: calc(16px + 1vh);"></i>';
       });
     } else {
-      link.forEach((item) => {
+      links.forEach((item) => {
         item.classList.add('hide');
         nav.style.position = 'unset';
         nav.style.height = '0';
