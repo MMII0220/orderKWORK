@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   var index = 0;
 
   function activeImage(n) {
-    for(carousel of carouselImages) {
+    for(var carousel of carouselImages) {
       carousel.classList.remove('active__image');
     }
 
@@ -24,10 +24,10 @@ window.addEventListener('DOMContentLoaded', () => {
   function rangeOfImage() {
     if (index == carouselImages.length - 1) {
       index = 0;
-      activeImage(index)
+      activeImage(index);
     } else {
       index++;
-      activeImage(index)
+      activeImage(index);
     }
   }
 
