@@ -94,7 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Carousel-Image
+  /* Carousel-Image - Booco
 
   ************************/
 
@@ -198,18 +198,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Сделать его в виде перемещеия пикселями.
 
-
-
-
-
-
-
-
-
-
-
-
-
   /* Carousel-Image - Offer
 
   ************************/
@@ -258,7 +246,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   nextOfferImage();
   prevOfferImage();
-
 
 
 
