@@ -133,16 +133,29 @@ window.addEventListener('DOMContentLoaded', () => {
     booco__left.addEventListener("click", minusImage);
   }
 
+  /* Images go Next every 5 sec */
+
+  setInterval(plusImage, 5000);
+
+  nextImage();
+  prevImage();
   
   /* Advantage, Carousel переход иконок.
 
   ********************************************/
 
-  var indexIcon = 0;
+  var indexIcon = addvantageIcon.length - 1;
 
   function replaceActiveIcon(n) {
-    addvantageIcon[n].classList.remove("active__icon");
-    addvantageIcon[n.length - 1].classList.add("active__icon");
+    addvantageIcon.forEach((item) => {
+      item.classList.remove("active__icon");
+    });
+
+    addvantageIcon.forEach((item, i) => {
+      if (n != i) {
+        item.classList.add("active__icon");
+      }
+    });
   }
 
   function plusIcon() {
@@ -170,24 +183,23 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function prevIcon() {
-    addvantageRight.addEventListener("click", minusIcon);
+    addvantageLeft.addEventListener("click", minusIcon);
   }
+
+  /* Images go Next every 5 sec */
+
+  setInterval(plusIcon, 5000);
 
   nextIcon();
   prevIcon();
 
+  // Сделать его в виде перемещеия пикселями.
 
 
 
 
 
 
-  /* Images go Next every 5 sec */
-
-  setInterval(plusImage, 5000);
-
-  nextImage();
-  prevImage();
 
   /* Nav Bar
 
