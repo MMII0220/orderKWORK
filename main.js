@@ -254,7 +254,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   /* Images go Next every 5 sec */
 
-  // setInterval(plusOfferImage, 5000);
+  setInterval(plusOfferImage, 5000);
 
   nextOfferImage();
   prevOfferImage();
