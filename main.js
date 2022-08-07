@@ -11,7 +11,10 @@ window.addEventListener('DOMContentLoaded', () => {
     arrowTop = document.querySelector(".arrowTop"),
     addvantageIcon = document.querySelectorAll(".advantage__blocks"),
     addvantageRight = document.querySelector(".advantage--icon__right"),
-    addvantageLeft = document.querySelector(".advantage--icon__left");
+    addvantageLeft = document.querySelector(".advantage--icon__left"),
+    offerRight = document.querySelector(".offer--icon__right"),
+    offerLeft = document.querySelector(".offer--icon__left"),
+    offerImages = document.querySelectorAll(".offer__occupied");
 
   /* Стрелка вверх, кликаем идет вверх
 
@@ -194,6 +197,80 @@ window.addEventListener('DOMContentLoaded', () => {
   prevIcon();
 
   // Сделать его в виде перемещеия пикселями.
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Carousel-Image - Offer
+
+  ************************/
+
+  var offerIndex = 0;
+
+  function activeOfferImage(n) {
+    for(var carousel of offerImages) {
+      carousel.classList.remove('active__offer');
+    }
+
+    offerImages[n].classList.add('active__offer');
+  }
+
+  function plusOfferImage() {
+    if (offerIndex == offerImages.length - 1) {
+      offerIndex = 0;
+      activeOfferImage(offerIndex);
+    } else {
+      offerIndex++;
+      activeOfferImage(offerIndex);
+    }
+  }
+
+  function minusOfferImage() {
+    if (offerIndex == 0) {
+      offerIndex = offerImages.length - 1;
+      activeImage(offerIndex);
+    } else {
+      offerIndex--;
+      activeImage(offerIndex);
+    }
+  }
+
+  function nextOfferImage() {
+    offerRight.addEventListener("click", plusOfferImage);
+  }
+
+  function prevOfferImage() {
+    offerLeft.addEventListener("click", minusOfferImage);
+  }
+
+  /* Images go Next every 5 sec */
+
+  // setInterval(plusOfferImage, 5000);
+
+  nextOfferImage();
+  prevOfferImage();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -776,6 +776,9 @@ textarea {
 } */
 .offer__occupied {
   margin: auto;
+  max-width: 100%;
+
+  display: none;
 }
 .offer__suptitle {
   width: 109%;
@@ -834,6 +837,8 @@ textarea {
   top: 50%;
   right: -67px;
 
+  z-index: 10;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -854,6 +859,12 @@ textarea {
 .offer--icon__right:hover {
   background-color: #fbfcfd;
   filter: opacity(100%);
+}
+.active__offer {
+  display: block;
+
+  animation-name: fade;
+  animation-duration: 1s;
 }
 
 /* Projects 
@@ -1035,6 +1046,11 @@ textarea {
     flex-wrap: nowrap;
   }
 }
+@media (max-width: 1300px) {
+  .offer__gallery{
+    text-align: center;
+  }
+}
 @media (max-width: 1140px) {
   .intro__content {
     width: 40%;
@@ -1113,6 +1129,9 @@ textarea {
   .contact__face {
     width: 100%;
   }
+  .offer__gallery{
+    text-align: start;
+  }
 }
 @media (max-width: 487px) {
   .arrowTop {
@@ -1121,6 +1140,10 @@ textarea {
   .contact__face {
     width: 100%;
     min-width: 199px;
+  }
+  .active__offer {
+    position: relative;
+    right: 40%;
   }
 }
 
@@ -1373,6 +1396,9 @@ textarea {
 @media (max-width: 320px) {
   .offer__description {
     width: 90%;
+  }
+  .active__offer {
+    right: 0;
   }
 }
 @media (max-width: 560px) {
