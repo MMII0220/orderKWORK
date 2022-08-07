@@ -6,6 +6,9 @@ body {
   color: #1f1f1f;
   font-family: 'Roboto', sans-serif;
 }
+.wrapper{
+  overflow: hidden;
+}
 .container {
   max-width: 1404px;
   width: 100%;
@@ -465,13 +468,13 @@ textarea {
   margin-left: 4.7%;
 }
 .booco__gallery__inner {
-  position: relative;
+  /* position: relative;
   width: 648px;
-  height: auto;
-  overflow: hidden;
-  padding-right: 22px;
+  height: auto; */
+  /* overflow: hidden; */
+  /* padding-right: 22px;
 
-  margin-right: 4.7%;
+  margin-right: 4.7%; */
 
   display: none;
 }
@@ -1141,13 +1144,12 @@ textarea {
   .booco__text {
     width: 100%;
   }
-  .booco__gallery__inner {
+  /* .booco__gallery__inner {
     overflow: visible;
     margin: auto;
     margin-top: 2%;
     margin-right: 5%;
-    /* padding-right: 0; */
-  }
+  } */
 }
 
 @media (max-width: 768px) {
@@ -1172,9 +1174,9 @@ textarea {
   }
 }
 @media (max-width: 320px) {
-  .booco__gallery__inner {
+  /* .booco__gallery__inner {
     margin-top: 30%;
-  }
+  } */
   .intro__title {
     font-size: calc(30px + 0.9vw);
   }

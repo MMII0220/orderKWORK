@@ -9,7 +9,46 @@ window.addEventListener('DOMContentLoaded', () => {
     carouselImages = document.querySelectorAll(".booco__gallery__inner"),
     smoothLinks = document.querySelectorAll('a[href^="#"]');
 
-  /* Link Transition
+  /* Arrow-top, Moving to top in one click
+
+  ***********************************************/
+
+  const screenHeight = window.innerHeight;
+
+  console.log(screenHeight);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollHeight > screenHeight) {
+      header.style.position = "fixed";
+      console.log("work");
+    } else {
+      header.style.position = "sticky";
+    }
+  });
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Link Moving down and transtiton
 
   ***********************/
 
@@ -21,10 +60,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
       const id = e.getAttribute("href");
 
-      document.querySelector(id).scrollIntoView({
-        behavior: "smooth",
-        block: 'start',
-      });
+      if (id) {
+        document.querySelector(id).scrollIntoView({
+          behavior: "smooth",
+          block: 'start',
+        });
+      } else {
+        // Перезагрежает страницу, если не находит ссылку
+
+        location.href = location.href;
+      }
     });
   }
 
@@ -42,7 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
     carouselImages[n].classList.add('active__image');
   }
 
-  function rangeOfImage() {
+  function plusImage() {
     if (indexImage == carouselImages.length - 1) {
       indexImage = 0;
       activeImage(indexImage);
@@ -52,28 +97,32 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function minusImage() {
+    if (indexImage == 0) {
+      indexImage = carouselImages.length - 1;
+      activeImage(indexImage);
+    } else {
+      indexImage--;
+      activeImage(indexImage);
+    }
+  }
+
   function nextImage() {
-    booco__right.addEventListener("click", rangeOfImage);
+    booco__right.addEventListener("click", plusImage);
   }
 
   function prevImage() {
-    booco__left.addEventListener("click", rangeOfImage);
+    booco__left.addEventListener("click", minusImage);
   }
+
+  /* Images go Next every 5 sec */
+
+  setInterval(plusImage, 5000);
 
   nextImage();
   prevImage();
-  rangeOfImage();
-  activeImage(indexImage);
 
-
-
-
-
-
-
-
-
-    /* Nav Bar
+  /* Nav Bar
 
   **********************/
 
@@ -101,7 +150,7 @@ window.addEventListener('DOMContentLoaded', () => {
         nav.style.animation = 'none';
         nav.style.background = 'none';
         document.body.style.backgroundColor = "white";
-        header.style.background = "white";
+        header.style.background = "aliceblue";
         icon__bar.innerHTML = '<i class="fa-solid fa-bars">';
       });
     }
