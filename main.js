@@ -7,46 +7,64 @@ window.addEventListener('DOMContentLoaded', () => {
     booco__right = document.querySelector(".icon__right"),
     booco__left = document.querySelector(".icon__left"),
     carouselImages = document.querySelectorAll(".booco__gallery__inner"),
-    smoothLinks = document.querySelectorAll('a[href^="#"]');
+    smoothLinks = document.querySelectorAll('a[href^="#"]'),
+    arrowTop = document.querySelector(".arrowTop"),
+    addvantageIcon = document.querySelectorAll(".advantage__blocks"),
+    addvantageRight = document.querySelector(".advantage--icon__right"),
+    addvantageLeft = document.querySelector(".advantage--icon__left");
 
-  /* Arrow-top, Moving to top in one click
+  /* Стрелка вверх, кликаем идет вверх
 
   ***********************************************/
 
-  const screenHeight = window.innerHeight;
+  var scrolled, timer;
 
-  console.log(screenHeight);
+  arrowTop.addEventListener("click", () => {
+    scrolled = window.pageYOffset;
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollHeight > screenHeight) {
-      header.style.position = "fixed";
-      console.log("work");
-    } else {
-      header.style.position = "sticky";
-    }
+    moveTop();
   });
 
-  
+  function moveTop() {
+    if (scrolled > 0) {
+      window.scrollTo(0, scrolled);
+      scrolled = scrolled - 100;
+      timer = setTimeout(moveTop, 10);
+    } else {
+      clearTimeout(timer);
+      window.scrollTo(0, 0);
+    }
+  }
 
+  // Стрелка Вверх, появление и исчезновение
 
+  function arrowTopApp() {
+    if (window.pageYOffset > document.documentElement.clientHeight - 100) {
+      arrowTop.style.display = "block";
+    } else {
+      arrowTop.style.display = "none";
+    }
+  }
 
+  window.addEventListener("scroll", arrowTopApp);
 
+  /* Позиционирование header ставляем fixed
 
+  **********************************************/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 0) {
+      header.style.position = "fixed";
+      header.style.paddingBottom = "2%";
+      header.style.animationName = "fade";
+      header.style.animationDuration = "1s";
+    } else {
+      header.style.position = "sticky";
+      header.style.paddingBottom = "1%";
+      header.style.animationName = "";
+      header.style.animationDuration = "";
+    }
+  });
 
   /* Link Moving down and transtiton
 
@@ -114,6 +132,55 @@ window.addEventListener('DOMContentLoaded', () => {
   function prevImage() {
     booco__left.addEventListener("click", minusImage);
   }
+
+  
+  /* Advantage, Carousel переход иконок.
+
+  ********************************************/
+
+  var indexIcon = 0;
+
+  function replaceActiveIcon(n) {
+    addvantageIcon[n].classList.remove("active__icon");
+    addvantageIcon[n.length - 1].classList.add("active__icon");
+  }
+
+  function plusIcon() {
+    if (indexIcon == addvantageIcon.length - 1) {
+      indexIcon = 0;
+      replaceActiveIcon(indexIcon);
+    } else {
+      indexIcon++;
+      replaceActiveIcon(indexIcon);
+    }
+  }
+
+  function minusIcon() {
+    if (indexIcon == 0) {
+      indexIcon = addvantageIcon.length - 1;
+      replaceActiveIcon(indexIcon);
+    } else {
+      indexIcon--;
+      replaceActiveIcon(indexIcon);
+    }
+  }
+
+  function nextIcon() {
+    addvantageRight.addEventListener("click", plusIcon);
+  }
+
+  function prevIcon() {
+    addvantageRight.addEventListener("click", minusIcon);
+  }
+
+  nextIcon();
+  prevIcon();
+
+
+
+
+
+
 
   /* Images go Next every 5 sec */
 

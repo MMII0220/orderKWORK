@@ -43,6 +43,23 @@ textarea {
   outline: none;
 }
 
+.arrowTop {
+  height: 22px;
+  width: 54px;
+  color: #2c62cc;
+  font-size: calc(50px + 1vw);
+  position: fixed;
+  top: 89%;
+  left: 90%;
+  cursor: pointer;
+
+  animation-name: fade;
+  animation-duration: 1s;
+
+  display: none;
+  z-index: 1000;
+}
+
 /* Header 
 
 **************/
@@ -484,6 +501,7 @@ textarea {
   animation-name: fade;
   animation-duration: 1s;
 }
+
 .screen__outer {
   max-width: 100%;
 }
@@ -613,6 +631,8 @@ textarea {
   position: relative;
   padding-top: 53px;
   padding-bottom: 60px;
+
+  display: none;
 }
 .advantage__blocks:last-child {
   margin-bottom: 0;
@@ -712,6 +732,20 @@ textarea {
   font-weight: 500;
   line-height: 130%;
 }
+.addvantage__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 30px;
+  position: relative;
+  text-align: center;
+}
+.active__icon {
+  display: block;
+
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
 /* Offer 
 
 ********************/
@@ -1081,6 +1115,9 @@ textarea {
   }
 }
 @media (max-width: 487px) {
+  .arrowTop {
+    left: 86%;
+  }
   .contact__face {
     width: 100%;
     min-width: 199px;
