@@ -269,8 +269,10 @@ window.addEventListener('DOMContentLoaded', () => {
         subscribeText.style.animationName = "fade";
         subscribeText.style.animationDuration = ".6s";
         oneTime++;
+      } else {
+        alert("Вы уже подписаны!");
       }
-  
+
       setTimeout(dissapearSubscribe, 1500);
     });
   });
