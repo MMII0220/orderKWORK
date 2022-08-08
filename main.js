@@ -14,7 +14,9 @@ window.addEventListener('DOMContentLoaded', () => {
     addvantageLeft = document.querySelector(".advantage--icon__left"),
     offerRight = document.querySelector(".offer--icon__right"),
     offerLeft = document.querySelector(".offer--icon__left"),
-    offerImages = document.querySelectorAll(".offer__occupied");
+    offerImages = document.querySelectorAll(".offer__occupied"),
+    subscribe = document.querySelector(".subscribe"),
+    subscribeText = document.querySelector(".subscribe__button");
 
   /* Стрелка вверх, кликаем идет вверх
 
@@ -247,12 +249,34 @@ window.addEventListener('DOMContentLoaded', () => {
   nextOfferImage();
   prevOfferImage();
 
+  /* Subscribe
 
+  *********************/
 
+  // Подписатся можно надать 1 раз.
 
+  var oneTime = 0;
 
+  subscribe.addEventListener("click", () => {
+    if (oneTime == 0) {
+      var pos = document.documentElement.scrollTop;
+      subscribeText.style.display = 'flex';
+      subscribeText.style.top += `${pos + 150}px`;
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      header.style.background = "rgba(0,0,0,0.4)";
+      subscribeText.style.animationName = "fade";
+      subscribeText.style.animationDuration = ".6s";
+      oneTime++;
+    }
 
+    setTimeout(dissapearSubscribe, 1500);
+  });
 
+  function dissapearSubscribe() {
+    document.body.style.backgroundColor = "white";
+    header.style.background = "aliceblue";
+    subscribeText.style.display = 'none';
+  }
 
 
 
@@ -300,4 +324,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     i++;
   });
+
+
 });

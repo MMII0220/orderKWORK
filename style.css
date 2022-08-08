@@ -980,6 +980,63 @@ textarea {
 
 ******************/
 
+/* Subscribe Button
+
+***************************/
+
+.subscribe__button {
+  position: absolute;
+  top: 160px;
+  left: 125px;
+
+  align-items: center;
+
+  text-align: center;
+
+  width: 600px;
+  height: 500px;
+
+  background-color: #1fa7e9;
+
+  border: 1px solid #606c72;
+  border-radius: 10%;
+
+  animation-name: fade;
+  animation-duration: 1s;
+
+  z-index: 1000;
+
+  display: none;
+}
+
+.active__subscribe {
+  display: flex;
+}
+
+.subscribe__title {
+  font-size: calc(50px + 1vw);
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer 
 
 ************************/
