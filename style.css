@@ -987,7 +987,7 @@ textarea {
 .subscribe__button {
   position: absolute;
   top: 160px;
-  left: 125px;
+  left: 403px;
 
   align-items: center;
 
@@ -1068,6 +1068,9 @@ textarea {
 }
 .footer__suptitle {
   margin-bottom: 38%;
+}
+.footer__suptitle a {
+  color: #1f1f1f;
 }
 .footer__subtitle {
   margin-top: 34%;
