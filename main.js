@@ -16,7 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
     offerLeft = document.querySelector(".offer--icon__left"),
     offerImages = document.querySelectorAll(".offer__occupied"),
     subscribe = document.querySelector(".subscribe"),
-    subscribeText = document.querySelector(".subscribe__button");
+    subscribeText = document.querySelector(".subscribe__button"),
+    fastRequest = document.querySelectorAll(".request__icon");
 
   /* Стрелка вверх, кликаем идет вверх
 
@@ -278,8 +279,15 @@ window.addEventListener('DOMContentLoaded', () => {
     subscribeText.style.display = 'none';
   }
 
+  /* Быстрый запрос
 
+  *************************/
 
+  fastRequest.forEach((item) => {
+    item.addEventListener("click", () => {
+      location.href = location.href;
+    });
+  });
 
 
 
