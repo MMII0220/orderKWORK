@@ -6,6 +6,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const arrowTop = document.querySelector(".arrowTop");
 
+  // Сколько мы прокрутили, и наш интервал чтоб могли остановить его
+
   var scrolled, timer;
 
   // Переход в самое начало
