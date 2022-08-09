@@ -1,27 +1,13 @@
 window.addEventListener('DOMContentLoaded', () => {
   const bar = document.querySelector('.icon__link'),
-    links = document.querySelectorAll('.nav__link'),
-    nav = document.querySelector('.nav'),
-    icon__bar = document.querySelector('.icon__link'),
-    header = document.querySelector(".header"),
-    booco__right = document.querySelector(".icon__right"),
-    booco__left = document.querySelector(".icon__left"),
-    carouselImages = document.querySelectorAll(".booco__gallery__inner"),
-    
-    arrowTop = document.querySelector(".arrowTop"),
-    addvantageIcon = document.querySelectorAll(".advantage__blocks"),
-    addvantageRight = document.querySelector(".advantage--icon__right"),
-    addvantageLeft = document.querySelector(".advantage--icon__left"),
-    offerRight = document.querySelector(".offer--icon__right"),
-    offerLeft = document.querySelector(".offer--icon__left"),
-    offerImages = document.querySelectorAll(".offer__occupied"),
-    subscribe = document.querySelectorAll(".subscribe"),
-    subscribeText = document.querySelector(".subscribe__button"),
-    fastRequest = document.querySelectorAll(".request__icon");
-
+        links = document.querySelectorAll('.nav__link'),
+        nav = document.querySelector('.nav'),
+        icon__bar = document.querySelector('.icon__link');
   /* Стрелка вверх, кликаем идет вверх
 
   ***********************************************/
+
+  const arrowTop = document.querySelector(".arrowTop");
 
   var scrolled, timer;
 
@@ -53,6 +39,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Стрелка Вверх, появление и исчезновение
 
   function arrowTopApp() {
+    // Если положение нашей окны, меньше чем положение начального окна. Показывается стрелка
+
     if (window.pageYOffset > document.documentElement.clientHeight - 100) {
       arrowTop.style.display = "block";
     } else {
@@ -67,6 +55,8 @@ window.addEventListener('DOMContentLoaded', () => {
   /* Позиционирование header ставляем fixed
 
   **********************************************/
+
+  const header = document.querySelector(".header");
 
   window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > 0) {
@@ -86,6 +76,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   ***********************/
 
+  // Обрабатываем то что внутри <<href="#">>
+
   const smoothLinks = document.querySelectorAll('a[href^="#"]');
 
   for (let smoothLink of smoothLinks) {
@@ -95,6 +87,8 @@ window.addEventListener('DOMContentLoaded', () => {
       const e = event.target;
 
       const id = e.getAttribute("href");
+
+      // Если внутри него, не пусто. Если есть чтото помимо <<#>>.
 
       if (id) {
         document.querySelector(id).scrollIntoView({
@@ -112,6 +106,10 @@ window.addEventListener('DOMContentLoaded', () => {
   /* Carousel-Image - Booco
 
   ************************/
+
+  const carouselImages = document.querySelectorAll(".booco__gallery__inner"), 
+        booco__right = document.querySelector(".icon__right"), 
+        booco__left = document.querySelector(".icon__left");
 
   var indexImage = 0;
 
@@ -151,7 +149,7 @@ window.addEventListener('DOMContentLoaded', () => {
     booco__left.addEventListener("click", minusImage);
   }
 
-  /* Images go Next every 5 sec */
+  // Изображение меняется каждые 5 сек
 
   setInterval(plusImage, 5000);
 
@@ -161,6 +159,10 @@ window.addEventListener('DOMContentLoaded', () => {
   /* Advantage, Carousel переход иконок.
 
   ********************************************/
+
+  const addvantageIcon = document.querySelectorAll(".advantage__blocks"),
+        addvantageRight = document.querySelector(".advantage--icon__right"),
+        addvantageLeft = document.querySelector(".advantage--icon__left");
 
   var indexIcon = addvantageIcon.length - 1;
 
@@ -204,7 +206,7 @@ window.addEventListener('DOMContentLoaded', () => {
     addvantageLeft.addEventListener("click", minusIcon);
   }
 
-  /* Images go Next every 5 sec */
+  // Изображение меняется каждые 5 сек
 
   setInterval(plusIcon, 5000);
 
@@ -216,6 +218,10 @@ window.addEventListener('DOMContentLoaded', () => {
   /* Carousel-Image - Offer
 
   ************************/
+
+  const offerImages = document.querySelectorAll(".offer__occupied"),
+        offerRight = document.querySelector(".offer--icon__right"),
+        offerLeft = document.querySelector(".offer--icon__left");
 
   var offerIndex = 0;
 
@@ -255,7 +261,7 @@ window.addEventListener('DOMContentLoaded', () => {
     offerLeft.addEventListener("click", minusOfferImage);
   }
 
-  /* Images go Next every 5 sec */
+  // Изображение меняется каждые 5 сек
 
   setInterval(plusOfferImage, 5000);
 
@@ -265,6 +271,9 @@ window.addEventListener('DOMContentLoaded', () => {
   /* Subscribe
 
   *********************/
+
+  const subscribe = document.querySelectorAll(".subscribe"),
+        subscribeText = document.querySelector(".subscribe__button");
 
   // Подписатся можно нажать 1 раз.
 
@@ -303,6 +312,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   *************************/
 
+  const fastRequest = document.querySelectorAll(".request__icon");
+
   fastRequest.forEach((item) => {
     item.addEventListener("click", () => {
       location.href = location.href;
@@ -315,6 +326,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let allImages = document.getElementsByTagName("img");
   let allSections = document.getElementsByTagName("section");
+
+  // Если четное то открываем, если нет закрываем
 
   var i = 0;
 
