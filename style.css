@@ -6,6 +6,9 @@ body {
   color: #1f1f1f;
   font-family: 'Roboto', sans-serif;
 }
+img {
+  opacity: 1;
+}
 .wrapper{
   overflow: hidden;
 }
@@ -993,8 +996,8 @@ textarea {
 
   text-align: center;
 
-  width: 600px;
-  height: 500px;
+  width: 50%;
+  height: 50%;
 
   background-color: #1fa7e9;
 
@@ -1014,28 +1017,9 @@ textarea {
 }
 
 .subscribe__title {
-  font-size: calc(50px + 1vw);
+  font-size: calc(30px + 1vw);
   color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Footer 
 
@@ -1204,6 +1188,9 @@ textarea {
   .active__offer {
     position: relative;
     right: 40%;
+  }
+  .subscribe__title {
+    font-size: calc(18px + 1vw);
   }
 }
 

@@ -293,17 +293,12 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
-
-
-
-
-
-
-
   /* Nav Bar
 
   **********************/
+
+  let allImages = document.getElementsByTagName("img");
+  let allSections = document.getElementsByTagName("section");
 
   var i = 0;
 
@@ -317,6 +312,12 @@ window.addEventListener('DOMContentLoaded', () => {
         nav.style.animationName = 'fade';
         nav.style.animationDuration = '.3s';
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        for (let i = 0; i < allImages.length; i++) {
+          allImages[i].style.opacity = "0.4";
+        }
+        for (let i = 0; i < allSections.length; i++) {
+          allSections[i].style.opacity = "0.4";
+        }
         header.style.background = "rgba(0,0,0,0.4)";
         icon__bar.innerHTML =
           '<i class="fa-solid fa-x" style="font-size: calc(16px + 1vh);"></i>';
@@ -329,6 +330,12 @@ window.addEventListener('DOMContentLoaded', () => {
         nav.style.animation = 'none';
         nav.style.background = 'none';
         document.body.style.backgroundColor = "white";
+        for (let i = 0; i < allImages.length; i++) {
+          allImages[i].style.opacity = "1";
+        }
+        for (let i = 0; i < allSections.length; i++) {
+          allSections[i].style.opacity = "1";
+        }
         header.style.background = "aliceblue";
         icon__bar.innerHTML = '<i class="fa-solid fa-bars">';
       });
