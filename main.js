@@ -1,8 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const bar = document.querySelector('.icon__link'),
-        links = document.querySelectorAll('.nav__link'),
-        nav = document.querySelector('.nav'),
-        icon__bar = document.querySelector('.icon__link');
+  
+
   /* Стрелка вверх, кликаем идет вверх
 
   ***********************************************/
@@ -324,8 +322,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   **********************/
 
-  let allImages = document.getElementsByTagName("img");
-  let allSections = document.getElementsByTagName("section");
+  const bar = document.querySelector('.icon__link'),
+        links = document.querySelectorAll('.nav__link'),
+        icon__bar = document.querySelector('.icon__link'),
+        nav = document.querySelector('.nav');
+
+  // Доступ к изображениям и блокам <<Section>>, чтоб менять их
+
+  let allImages = document.getElementsByTagName("img"),
+      allSections = document.getElementsByTagName("section");
 
   // Если четное то открываем, если нет закрываем
 
