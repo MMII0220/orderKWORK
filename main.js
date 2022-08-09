@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     booco__right = document.querySelector(".icon__right"),
     booco__left = document.querySelector(".icon__left"),
     carouselImages = document.querySelectorAll(".booco__gallery__inner"),
-    smoothLinks = document.querySelectorAll('a[href^="#"]'),
+    
     arrowTop = document.querySelector(".arrowTop"),
     addvantageIcon = document.querySelectorAll(".advantage__blocks"),
     addvantageRight = document.querySelector(".advantage--icon__right"),
@@ -25,18 +25,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
   var scrolled, timer;
 
+  // Переход в самое начало
+
   arrowTop.addEventListener("click", () => {
     scrolled = window.pageYOffset;
 
     moveTop();
   });
 
+  // Передвигаемся вверх, пока не достигнем 0 позиции
+
   function moveTop() {
     if (scrolled > 0) {
+      // Это и есть наша анимация, каждую 0.01 секунду передвигаемся на 100 px вверх
+
       window.scrollTo(0, scrolled);
       scrolled = scrolled - 100;
       timer = setTimeout(moveTop, 10);
     } else {
+      // Останавливаем SetInterval, и позицию ставим 0.
+
       clearTimeout(timer);
       window.scrollTo(0, 0);
     }
@@ -51,6 +59,8 @@ window.addEventListener('DOMContentLoaded', () => {
       arrowTop.style.display = "none";
     }
   }
+
+  // Скролим появляется, Стрелка вверх
 
   window.addEventListener("scroll", arrowTopApp);
 
@@ -72,9 +82,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* Link Moving down and transtiton
+  /* Панель навигации - Переход по странице
 
   ***********************/
+
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
 
   for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener("click", (event) => {
@@ -254,7 +266,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   *********************/
 
-  // Подписатся можно надать 1 раз.
+  // Подписатся можно нажать 1 раз.
 
   var oneTime = 0;
 
@@ -273,10 +285,14 @@ window.addEventListener('DOMContentLoaded', () => {
         alert("Вы уже подписаны!");
       }
 
+      // Через 1,5 секунд модульное окно исчезает
+
       setTimeout(dissapearSubscribe, 1500);
     });
   });
   
+  // Функция исчезновения модульного окна
+
   function dissapearSubscribe() {
     document.body.style.backgroundColor = "white";
     header.style.background = "aliceblue";
@@ -293,7 +309,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* Nav Bar
+  /* Панель Навигации
 
   **********************/
 
@@ -312,12 +328,15 @@ window.addEventListener('DOMContentLoaded', () => {
         nav.style.animationName = 'fade';
         nav.style.animationDuration = '.3s';
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
         for (let i = 0; i < allImages.length; i++) {
           allImages[i].style.opacity = "0.4";
         }
+
         for (let i = 0; i < allSections.length; i++) {
           allSections[i].style.opacity = "0.4";
         }
+
         header.style.background = "rgba(0,0,0,0.4)";
         icon__bar.innerHTML =
           '<i class="fa-solid fa-x" style="font-size: calc(16px + 1vh);"></i>';
@@ -330,12 +349,15 @@ window.addEventListener('DOMContentLoaded', () => {
         nav.style.animation = 'none';
         nav.style.background = 'none';
         document.body.style.backgroundColor = "white";
+
         for (let i = 0; i < allImages.length; i++) {
           allImages[i].style.opacity = "1";
         }
+
         for (let i = 0; i < allSections.length; i++) {
           allSections[i].style.opacity = "1";
         }
+
         header.style.background = "aliceblue";
         icon__bar.innerHTML = '<i class="fa-solid fa-bars">';
       });
@@ -343,6 +365,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
     i++;
   });
-
 
 });
